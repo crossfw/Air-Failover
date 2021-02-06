@@ -2,7 +2,6 @@ package main
 
 import (
 	"github.com/crossfw/air-failover/pkg/controller"
-	"github.com/crossfw/air-failover/pkg/json"
 	"github.com/crossfw/air-failover/pkg/log"
 	"os"
 )
@@ -10,7 +9,7 @@ import (
 func main() {
 	log.Debug.Println("Started")
 	path := "config/example.json"
-	cfg, err := json.ReadConfig(&path)
+	cfg, err := parseBaseConfig(&path)
 	for err != nil {
 		log.Warn.Println(err)
 	}

@@ -7,7 +7,7 @@
       "cloudflare_email": "1@example.com",
       "cloudflare_token": "1234567890"
   },
-  "servers":[
+  "nodes":[
     {
       "tag": "A",
       "main_domain": "baidu.com",
@@ -30,15 +30,15 @@
   "failover_rule":[
     {
       "tag": "A",
-      "failover_nodes": ["B", "C"]
+      "backup_nodes": ["B", "C"]
     },
     {
       "tag": "B",
-      "failover_nodes": ["A"]
+      "backup_nodes": ["A"]
     },
     {
       "tag": "C",
-      "failover_nodes": ["A", "B"]
+      "backup_nodes": ["A", "B"]
     }
   ],
   "failover_condition": {
