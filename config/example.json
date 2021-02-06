@@ -1,0 +1,41 @@
+{
+  "global": {
+      "check_rate": 60,
+      "cloudflare_email": "1@example.com",
+      "cloudflare_token": "1234567890"
+  },
+  "relay_servers":[
+    {
+      "tag": "A",
+      "main_domain": "a.example.com",
+      "failover_domain": "a.t.example.com",
+      "monitor_ports": [2233, 2234]
+    },
+    {
+      "tag": "B",
+      "main_domain": "b.example.com",
+      "failover_domain": "b.t.example.com",
+      "monitor_ports": [2233, 2234, 2235]
+    },
+    {
+      "tag": "C",
+      "main_domain": "c.example.com",
+      "failover_domain": "c.t.example.com",
+      "monitor_ports": [2233]
+    }
+  ],
+  "failover_rule":[
+    {
+      "tag": "A",
+      "failover_nodes": ["B", "C"]
+    },
+    {
+      "tag": "B",
+      "failover_nodes": ["A"]
+    },
+    {
+      "tag": "C",
+      "failover_nodes": ["A", "B"]
+    }
+  ]
+}
