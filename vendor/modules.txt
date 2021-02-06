@@ -1,0 +1,5 @@
+# github.com/cloverstd/tcping v0.1.1
+## explicit
+github.com/cloverstd/tcping/ping
+# github.com/spf13/cobra v1.1.1
+## explicit

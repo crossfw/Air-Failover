@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-type config struct {
+type Config struct {
 	Global struct {
 		CheckRate       int    `json:"check_rate"`
 		CloudflareEmail string `json:"cloudflare_email"`
@@ -24,9 +24,8 @@ type config struct {
 	} `json:"failover_rule"`
 }
 
-
-func ReadConfig( configPath *string) (*config, error) {
-	var cfg config
+func ReadConfig(configPath *string) (*Config, error) {
+	var cfg Config
 	file, err := os.Open(*configPath)
 	if err != nil {
 		return nil, err

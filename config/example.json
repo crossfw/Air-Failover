@@ -1,15 +1,18 @@
 {
+  "log":{
+    "log_level": "debug"
+  },
   "global": {
       "check_rate": 60,
       "cloudflare_email": "1@example.com",
       "cloudflare_token": "1234567890"
   },
-  "relay_servers":[
+  "servers":[
     {
       "tag": "A",
-      "main_domain": "a.example.com",
+      "main_domain": "baidu.com",
       "failover_domain": "a.t.example.com",
-      "monitor_ports": [2233, 2234]
+      "monitor_ports": [80, 2234]
     },
     {
       "tag": "B",
@@ -37,5 +40,19 @@
       "tag": "C",
       "failover_nodes": ["A", "B"]
     }
-  ]
+  ],
+  "failover_condition": {
+    "check": {
+      "count": 5,
+      "interval_time": 1,
+      "min_success_rate": 0.5,
+      "max_ping_time": 5
+    },
+    "failover_out": {
+      "fail_times": 3
+    },
+    "failover_back": {
+      "success_times": 2
+    }
+  }
 }
