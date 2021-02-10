@@ -1,9 +1,9 @@
 package controller
 
 import (
-	"github.com/crossfw/air-failover/pkg/json"
-	"github.com/crossfw/air-failover/pkg/log"
-	"github.com/crossfw/air-failover/pkg/tcping"
+	"github.com/crossfw/Air-Failover/pkg/json"
+	"github.com/crossfw/Air-Failover/pkg/log"
+	"github.com/crossfw/Air-Failover/pkg/tcping"
 )
 
 func Controller(cfg *json.Config) {

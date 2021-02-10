@@ -1,4 +1,4 @@
-module github.com/crossfw/air-failover
+module github.com/crossfw/Air-Failover
 
 go 1.15
 

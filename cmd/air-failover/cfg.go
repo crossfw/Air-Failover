@@ -2,7 +2,7 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/crossfw/air-failover/pkg/log"
+	"github.com/crossfw/Air-Failover/pkg/log"
 	"os"
 )
 

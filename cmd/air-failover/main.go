@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/crossfw/air-failover/pkg/controller"
-	"github.com/crossfw/air-failover/pkg/log"
+	"github.com/crossfw/Air-Failover/pkg/controller"
+	"github.com/crossfw/Air-Failover/pkg/log"
 	"os"
 )
 
